@@ -386,8 +386,14 @@ body {
 /* Entry Image Container */
 .entry-image-container {
     flex-shrink: 0;
-    width: 350px;
-    height: 250px;
+    flex-grow: 0;
+    width: 350px !important;
+    min-width: 350px;
+    max-width: 350px;
+    height: 437.5px !important; /* 4:5 aspect ratio (350 * 5/4 = 437.5) */
+    min-height: 437.5px;
+    max-height: 437.5px;
+    aspect-ratio: 4 / 5; /* Explicit aspect ratio for screenshot compatibility */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -396,6 +402,7 @@ body {
     border: 2px solid rgba(230, 126, 34, 0.2);
     padding: 0;
     overflow: hidden;
+    box-sizing: border-box; /* Ensure border is included in dimensions */
 }
 
 .entry-image {
@@ -561,7 +568,9 @@ body {
 
     .entry-image-container {
         width: 100%;
-        height: 200px;
+        max-width: 350px;
+        height: 437.5px; /* Maintain 4:5 aspect ratio */
+        aspect-ratio: 4 / 5;
         align-self: center;
     }
 }
@@ -593,7 +602,9 @@ body {
 
     .entry-image-container {
         width: 100%;
-        height: 180px;
+        max-width: 350px;
+        height: 437.5px; /* Maintain 4:5 aspect ratio */
+        aspect-ratio: 4 / 5;
     }
 }
 
