@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Timeline of World Literature</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- PDF Export Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <h1 class="nav-title">World Literature Timeline</h1>
+                <p class="nav-student-info">John Ryan Gomez | BSIT - 4D | LIT 11 - 96103</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Multimedia Timeline of World Literature</h1>
+            <p class="hero-subtitle">Journey through 4,000 years of literary history</p>
+            <button class="cta-button" onclick="scrollToSection('timeline')">Explore Timeline</button>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </header>
+
+    <!-- Period Navigation -->
+    <section class="period-filter">
+        <div class="filter-container">
+            <button class="filter-btn" onclick="scrollToPeriod('ancient')">Ancient</button>
+            <button class="filter-btn" onclick="scrollToPeriod('medieval')">Medieval & Renaissance</button>
+            <button class="filter-btn" onclick="scrollToPeriod('enlightenment')">Enlightenment to Realism</button>
+            <button class="filter-btn" onclick="scrollToPeriod('modern')">Modern & Contemporary</button>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="timeline-container">
+            <!-- Timeline Line -->
+            <div class="timeline-line"></div>
+
+            <!-- Period 1: Ancient Literature -->
+            <div id="period-ancient" class="period-header" data-period="ancient">
+                <h2>Period 1: Ancient Literature</h2>
+                <p class="period-dates">3000 BCE - 500 CE</p>
+            </div>
+
+            <!-- Entry 1: Epic of Gilgamesh -->
+            <div class="timeline-entry" data-period="ancient" data-entry="1">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">c. 2100 BCE</div>
+                        <h3 class="entry-title">The Epic of Gilgamesh</h3>
+                        <p class="entry-author">Anonymous (Sumerian/Babylonian)</p>
+                        <p class="entry-region">Mesopotamia (Modern-day Iraq)</p>
+                        <div class="entry-description">
+                            <p>The Epic of Gilgamesh is the oldest known work of literature in human history, written on clay tablets in cuneiform script. This epic poem tells the story of Gilgamesh, a legendary king of Uruk, and his quest for immortality after the death of his friend Enkidu. The work explores universal themes of friendship, mortality, and the human condition, making it remarkably relevant even today. It represents one of humanity's earliest attempts to understand life, death, and the meaning of existence through storytelling.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Epic Poetry</span>
+                            <span class="tag">Mesopotamian</span>
+                            <span class="tag">Ancient</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://edblogs.columbia.edu/worldepics/files/2020/01/Gilgamesh_Enkidu.jpg" alt="The Epic of Gilgamesh" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 2: Homer -->
+            <div class="timeline-entry" data-period="ancient" data-entry="2">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">c. 8th century BCE</div>
+                        <h3 class="entry-title">The Iliad and The Odyssey</h3>
+                        <p class="entry-author">Homer (traditionally attributed)</p>
+                        <p class="entry-region">Ancient Greece</p>
+                        <div class="entry-description">
+                            <p>Homer's epic poems are foundational works of Western literature, originally composed orally and later written down. The Iliad recounts the Trojan War, focusing on the hero Achilles and themes of honor, glory, and wrath. The Odyssey follows Odysseus's ten-year journey home after the war, exploring themes of cunning, perseverance, and the longing for home. These works established many conventions of epic poetry and continue to influence literature, art, and culture worldwide.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Epic Poetry</span>
+                            <span class="tag">Greek</span>
+                            <span class="tag">Classical</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1635080465i/59441099.jpg" alt="The Iliad and The Odyssey" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 3: Mahabharata -->
+            <div class="timeline-entry" data-period="ancient" data-entry="3">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">c. 400 BCE - 400 CE</div>
+                        <h3 class="entry-title">The Mahabharata</h3>
+                        <p class="entry-author">Traditionally attributed to Vyasa</p>
+                        <p class="entry-region">Ancient India</p>
+                        <div class="entry-description">
+                            <p>The Mahabharata is one of the longest epic poems in world literature, containing over 200,000 verses. It tells the story of a great war between two branches of a royal family and includes the Bhagavad Gita, a sacred Hindu text. The epic explores complex themes of duty (dharma), righteousness, and the moral dilemmas faced in life. It has profoundly influenced Indian culture, philosophy, and literature for over two millennia and remains a living tradition in South Asia.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Epic Poetry</span>
+                            <span class="tag">Indian</span>
+                            <span class="tag">Philosophical</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://cdn.kobo.com/book-images/7f970871-7505-48cb-a771-a8e7e9442169/1200/1200/False/the-mahabharata-6.jpg" alt="The Mahabharata" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 4: Virgil -->
+            <div class="timeline-entry" data-period="ancient" data-entry="4">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">29-19 BCE</div>
+                        <h3 class="entry-title">The Aeneid</h3>
+                        <p class="entry-author">Virgil (Publius Vergilius Maro)</p>
+                        <p class="entry-region">Ancient Rome</p>
+                        <div class="entry-description">
+                            <p>The Aeneid is a Roman epic poem that tells the legendary story of Aeneas, a Trojan hero who travels to Italy and becomes the ancestor of the Romans. Written during the reign of Augustus, it was intended to provide Rome with a national epic comparable to Homer's works. The poem explores themes of duty, fate, and the founding of civilizations. It became a cornerstone of Roman literature and education, influencing countless later works including Dante's Divine Comedy.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Epic Poetry</span>
+                            <span class="tag">Roman</span>
+                            <span class="tag">Classical</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Aeneas%27_Flight_from_Troy_by_Federico_Barocci.jpg" alt="The Aeneid" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Period 2: Medieval & Renaissance -->
+            <div id="period-medieval" class="period-header" data-period="medieval">
+                <h2>Period 2: Medieval & Renaissance Literature</h2>
+                <p class="period-dates">500 - 1600 CE</p>
+            </div>
+
+            <!-- Entry 5: Beowulf -->
+            <div class="timeline-entry" data-period="medieval" data-entry="5">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">c. 700-1000 CE</div>
+                        <h3 class="entry-title">Beowulf</h3>
+                        <p class="entry-author">Anonymous (Anglo-Saxon poet)</p>
+                        <p class="entry-region">England/Anglo-Saxon</p>
+                        <div class="entry-description">
+                            <p>Beowulf is the oldest surviving epic poem in Old English and one of the most important works of Anglo-Saxon literature. The poem tells the story of Beowulf, a Geatish hero who battles three monsters: Grendel, Grendel's mother, and a dragon. It explores themes of heroism, loyalty, mortality, and the struggle between good and evil. Written in alliterative verse, Beowulf provides valuable insight into early English culture and has influenced modern fantasy literature, including J.R.R. Tolkien's works.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Epic Poetry</span>
+                            <span class="tag">Anglo-Saxon</span>
+                            <span class="tag">Medieval</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLVLNF1yXJXyLgJMr2Fs1gC40Aqyy9D4yW2Q&s" alt="Beowulf" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 6: Dante -->
+            <div class="timeline-entry" data-period="medieval" data-entry="6">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1308-1321 CE</div>
+                        <h3 class="entry-title">The Divine Comedy</h3>
+                        <p class="entry-author">Dante Alighieri</p>
+                        <p class="entry-region">Italy (Florence)</p>
+                        <div class="entry-description">
+                            <p>The Divine Comedy is a monumental epic poem written in Italian vernacular, divided into three parts: Inferno (Hell), Purgatorio (Purgatory), and Paradiso (Paradise). The work follows Dante's allegorical journey through the afterlife, guided by the Roman poet Virgil and later by his beloved Beatrice. It combines theology, philosophy, and political commentary, establishing Italian as a literary language. The poem's vivid imagery and complex symbolism have influenced art, literature, and Western thought for centuries.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Epic Poetry</span>
+                            <span class="tag">Italian</span>
+                            <span class="tag">Allegorical</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://cdn.kobo.com/book-images/6e5d9a87-148d-4846-aecb-061f0a0bcf14/1200/1200/False/the-divine-comedy-51.jpg" alt="The Divine Comedy" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 7: Chaucer -->
+            <div class="timeline-entry" data-period="medieval" data-entry="7">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1387-1400 CE</div>
+                        <h3 class="entry-title">The Canterbury Tales</h3>
+                        <p class="entry-author">Geoffrey Chaucer</p>
+                        <p class="entry-region">England</p>
+                        <div class="entry-description">
+                            <p>The Canterbury Tales is a collection of 24 stories told by a diverse group of pilgrims traveling to Canterbury Cathedral. Written in Middle English, it provides a vivid portrait of medieval English society across different social classes. Chaucer's work is celebrated for its humor, realism, and character development, marking a significant shift toward more human-centered literature. The Tales helped establish English as a literary language and influenced the development of English poetry and prose fiction.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Narrative Poetry</span>
+                            <span class="tag">English</span>
+                            <span class="tag">Medieval</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://cdn.kobo.com/book-images/e4f6f90c-6023-4c9d-96ae-8aed913d924c/1200/1200/False/the-canterbury-tales-feathers-classics.jpg" alt="The Canterbury Tales" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 8: Cervantes -->
+            <div class="timeline-entry" data-period="medieval" data-entry="8">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1605-1615 CE</div>
+                        <h3 class="entry-title">Don Quixote</h3>
+                        <p class="entry-author">Miguel de Cervantes</p>
+                        <p class="entry-region">Spain</p>
+                        <div class="entry-description">
+                            <p>Don Quixote is widely considered the first modern novel and one of the greatest works of world literature. The story follows Alonso Quixano, a middle-aged man who becomes so obsessed with chivalric romances that he decides to become a knight-errant. Cervantes masterfully blends comedy and tragedy, reality and fantasy, creating a work that both parodies and celebrates the chivalric tradition. The novel's innovative narrative techniques, including metafiction and unreliable narrators, influenced the development of the novel as a literary form.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Novel</span>
+                            <span class="tag">Spanish</span>
+                            <span class="tag">Satirical</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://www.aliceandbooks.com/covers/Don_Quixote-Miguel_de_Cervantes-lg.png" alt="Don Quixote" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Period 3: Enlightenment to Realism -->
+            <div id="period-enlightenment" class="period-header" data-period="enlightenment">
+                <h2>Period 3: Enlightenment, Romanticism & Realism</h2>
+                <p class="period-dates">1600 - 1900 CE</p>
+            </div>
+
+            <!-- Entry 9: Voltaire -->
+            <div class="timeline-entry" data-period="enlightenment" data-entry="9">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1759 CE</div>
+                        <h3 class="entry-title">Candide, or Optimism</h3>
+                        <p class="entry-author">Voltaire (François-Marie Arouet)</p>
+                        <p class="entry-region">France</p>
+                        <div class="entry-description">
+                            <p>Candide is a satirical novella that critiques the optimistic philosophy of Gottfried Leibniz through the misadventures of its naive protagonist. The work follows Candide as he travels the world, experiencing war, natural disasters, and human cruelty, all while maintaining his tutor's philosophy that "all is for the best." Voltaire uses sharp wit and dark humor to expose the absurdity of blind optimism and social injustices. The novella became one of the most influential works of the Enlightenment, promoting reason, skepticism, and social criticism.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Satire</span>
+                            <span class="tag">French</span>
+                            <span class="tag">Enlightenment</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://m.media-amazon.com/images/I/71p0We4lrmL._AC_UF894,1000_QL80_.jpg" alt="Candide, or Optimism" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 10: Shelley -->
+            <div class="timeline-entry" data-period="enlightenment" data-entry="10">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1818 CE</div>
+                        <h3 class="entry-title">Frankenstein; or, The Modern Prometheus</h3>
+                        <p class="entry-author">Mary Shelley</p>
+                        <p class="entry-region">England</p>
+                        <div class="entry-description">
+                            <p>Frankenstein is a groundbreaking Gothic novel that has become one of the most enduring works of Romantic literature. Written when Shelley was only 18, the novel tells the story of Victor Frankenstein, a scientist who creates a sentient being and then abandons it. The work explores profound themes of creation, responsibility, isolation, and the consequences of unchecked ambition. Often considered the first science fiction novel, Frankenstein continues to influence literature, film, and popular culture, raising timeless questions about science, ethics, and humanity.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Gothic Novel</span>
+                            <span class="tag">English</span>
+                            <span class="tag">Romantic</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://www.gutenberg.org/cache/epub/84/pg84.cover.medium.jpg" alt="Frankenstein; or, The Modern Prometheus" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 11: Dickens -->
+            <div class="timeline-entry" data-period="enlightenment" data-entry="11">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1859 CE</div>
+                        <h3 class="entry-title">A Tale of Two Cities</h3>
+                        <p class="entry-author">Charles Dickens</p>
+                        <p class="entry-region">England</p>
+                        <div class="entry-description">
+                            <p>A Tale of Two Cities is a historical novel set in London and Paris before and during the French Revolution. The novel follows the lives of several characters whose fates become intertwined, including the self-sacrificing Sydney Carton. Dickens masterfully portrays the social conditions that led to revolution, exploring themes of justice, sacrifice, resurrection, and the contrast between the two cities. The novel's famous opening line, "It was the best of times, it was the worst of times," has become one of literature's most quoted phrases, and the work remains one of the best-selling novels of all time.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Historical Novel</span>
+                            <span class="tag">English</span>
+                            <span class="tag">Realism</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://www.gutenberg.org/files/98/98-h/images/0404.jpg" alt="A Tale of Two Cities" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 12: Realism Movement -->
+            <div class="timeline-entry" data-period="enlightenment" data-entry="12">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1850-1900 CE</div>
+                        <h3 class="entry-title">Realism Literary Movement</h3>
+                        <p class="entry-author">Multiple authors (Gustave Flaubert, Leo Tolstoy, Mark Twain, etc.)</p>
+                        <p class="entry-region">Europe and America</p>
+                        <div class="entry-description">
+                            <p>Realism emerged as a literary movement in the mid-19th century as a reaction against Romanticism's idealism. Realist writers sought to depict everyday life and ordinary people with accuracy and detail, focusing on the middle and lower classes. The movement emphasized objective observation, detailed descriptions, and psychological depth. Major works include Flaubert's Madame Bovary, Tolstoy's Anna Karenina, and Twain's The Adventures of Huckleberry Finn. Realism influenced the development of modern literature and paved the way for Naturalism and other 20th-century movements.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Literary Movement</span>
+                            <span class="tag">International</span>
+                            <span class="tag">19th Century</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://www.skyminds.net/wp-content/uploads/2018/06/jean-francois-millet-les-glaneuses-compressor.jpg" alt="Realism Literary Movement" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Period 4: Modern & Contemporary -->
+            <div id="period-modern" class="period-header" data-period="modern">
+                <h2>Period 4: Modern & Contemporary Literature</h2>
+                <p class="period-dates">1900 - Present</p>
+            </div>
+
+            <!-- Entry 13: Joyce -->
+            <div class="timeline-entry" data-period="modern" data-entry="13">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1922 CE</div>
+                        <h3 class="entry-title">Ulysses</h3>
+                        <p class="entry-author">James Joyce</p>
+                        <p class="entry-region">Ireland</p>
+                        <div class="entry-description">
+                            <p>Ulysses is one of the most important and challenging works of modernist literature, chronicling a single day (June 16, 1904) in Dublin through the experiences of Leopold Bloom, Stephen Dedalus, and Molly Bloom. Joyce employs stream-of-consciousness narrative, experimental prose styles, and extensive allusions to Homer's Odyssey. The novel's innovative techniques revolutionized narrative form and influenced countless later writers. Despite initial controversy and censorship, Ulysses is now recognized as a masterpiece that captures the complexity of modern consciousness and urban life.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Modernist Novel</span>
+                            <span class="tag">Irish</span>
+                            <span class="tag">Experimental</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://cdn.kobo.com/book-images/17f4f2f5-2ae8-4d6d-9e30-7efde7bc4d25/1200/1200/False/ulysses-by-james-joyce-5.jpg" alt="Ulysses" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 14: García Márquez -->
+            <div class="timeline-entry" data-period="modern" data-entry="14">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1967 CE</div>
+                        <h3 class="entry-title">One Hundred Years of Solitude</h3>
+                        <p class="entry-author">Gabriel García Márquez</p>
+                        <p class="entry-region">Colombia/Latin America</p>
+                        <div class="entry-description">
+                            <p>One Hundred Years of Solitude is the masterpiece of magical realism, telling the multi-generational story of the Buendía family in the fictional town of Macondo. García Márquez seamlessly blends realistic events with fantastical elements, creating a rich tapestry that reflects Latin American history and culture. The novel explores themes of time, memory, solitude, and the cyclical nature of history. It brought international recognition to Latin American literature and influenced writers worldwide, establishing magical realism as a major literary movement.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Magical Realism</span>
+                            <span class="tag">Colombian</span>
+                            <span class="tag">Postmodern</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1327881361i/320.jpg" alt="One Hundred Years of Solitude" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entry 15: Contemporary -->
+            <div class="timeline-entry" data-period="modern" data-entry="15">
+                <div class="entry-marker"></div>
+                <div class="entry-content">
+                    <div class="entry-text-content">
+                        <div class="entry-date">1980 - Present</div>
+                        <h3 class="entry-title">Contemporary Global Literature</h3>
+                        <p class="entry-author">Multiple authors (Salman Rushdie, Chimamanda Ngozi Adichie, Haruki Murakami, etc.)</p>
+                        <p class="entry-region">Worldwide</p>
+                        <div class="entry-description">
+                            <p>Contemporary global literature represents the increasing diversity and interconnectedness of world literature in the late 20th and early 21st centuries. This period has seen the rise of postcolonial literature, the global recognition of previously marginalized voices, and the blending of cultural traditions. Authors from Africa, Asia, Latin America, and other regions have gained international prominence, bringing new perspectives and narrative styles. Works like Rushdie's Midnight's Children, Adichie's Half of a Yellow Sun, and Murakami's novels reflect themes of identity, migration, globalization, and cultural hybridity that define our contemporary world.</p>
+                        </div>
+                        <div class="entry-tags">
+                            <span class="tag">Global Movement</span>
+                            <span class="tag">International</span>
+                            <span class="tag">Contemporary</span>
+                        </div>
+                    </div>
+                    <div class="entry-image-container">
+                        <img src="https://sfliteraryfestival.org/wp-content/uploads/2024/07/6.jpg" alt="Contemporary Global Literature" class="entry-image">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Works Cited Section -->
+    <section class="works-cited-section">
+        <div class="works-cited-container">
+            <h2>Works Cited</h2>
+            <div class="citations">
+                <p>Alighieri, Dante. <em>The Divine Comedy</em>. Translated by John Ciardi, New American Library, 2003.</p>
+                <p>Cervantes, Miguel de. <em>Don Quixote</em>. Translated by Edith Grossman, Ecco, 2005.</p>
+                <p>Chaucer, Geoffrey. <em>The Canterbury Tales</em>. Edited by V. A. Kolve, W. W. Norton & Company, 2018.</p>
+                <p>Dickens, Charles. <em>A Tale of Two Cities</em>. Penguin Classics, 2003.</p>
+                <p>García Márquez, Gabriel. <em>One Hundred Years of Solitude</em>. Translated by Gregory Rabassa, Harper Perennial, 2006.</p>
+                <p>Homer. <em>The Iliad</em>. Translated by Robert Fagles, Penguin Classics, 1998.</p>
+                <p>Homer. <em>The Odyssey</em>. Translated by Robert Fagles, Penguin Classics, 1999.</p>
+                <p>Joyce, James. <em>Ulysses</em>. Vintage, 1990.</p>
+                <p>Shelley, Mary. <em>Frankenstein; or, The Modern Prometheus</em>. Penguin Classics, 2018.</p>
+                <p>Voltaire. <em>Candide, or Optimism</em>. Translated by Burton Raffel, Yale University Press, 2005.</p>
+                <p>"The Epic of Gilgamesh." Translated by Andrew George, Penguin Classics, 2003.</p>
+                <p>"The Mahabharata." Translated by C. V. Narasimhan, Columbia University Press, 1998.</p>
+                <p>"Beowulf." Translated by Seamus Heaney, W. W. Norton & Company, 2000.</p>
+                <p>Virgil. <em>The Aeneid</em>. Translated by Robert Fagles, Penguin Classics, 2008.</p>
+                <p>Abrams, M. H. <em>A Glossary of Literary Terms</em>. 11th ed., Cengage Learning, 2015.</p>
+                <p>Damrosch, David. <em>How to Read World Literature</em>. Wiley-Blackwell, 2017.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>Created by:</strong> John Ryan Gomez</p>
+        <p><strong>Course:</strong> BSIT - 4D | <strong>Subject:</strong> LIT 11 - 96103</p>
+        <p>Final Project: Multimedia Timeline of World Literature</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" onclick="scrollToTop()" id="scrollTopBtn">↑</button>
+
+    <!-- PDF Export Button -->
+    <button class="pdf-export-btn" onclick="exportToPDF()" id="pdfExportBtn" title="Export to PDF">
+        <span class="pdf-icon">📄</span>
+        <span class="pdf-text">PDF</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
